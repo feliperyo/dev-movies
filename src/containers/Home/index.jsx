@@ -1,17 +1,45 @@
 import api from '../../services/api'
+import { useState, useEffect } from 'react'
+
+import { Background, Container, ContainerButtons, Info, Poster } from './styles'
+import Button from '../../components/Button'
 
 function Home() {
-  async function getMovies() {
-    const data = await api.get('/movie/popular')
-    console.log(data)
-  }
+  const [movie, setMovie] = useState()
 
-  getMovies()
+  useEffect(() => {
+    async function getMovies() {
+      const { data: { results } } = await api.get('/movie/popular')
+      setMovie(results[1])
+    }
+
+    getMovies()
+
+  }, [])
+
+
 
   return (
     <>
-      <h1>Home</h1>
-      <p>Essa é a Home</p>
+      {movie && (
+        <Background img={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}>
+          <Container>
+            <Info>
+              <h1>{movie.title}</h1>
+              <p>{movie.overview}</p>
+              <ContainerButtons>
+                <Button red={true}>Assista Agora</Button>
+                <Button red={false}>Trailer</Button>
+              </ContainerButtons>
+            </Info>
+
+            <Poster>
+              <img alt="capa-do-filme" src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
+            </Poster>
+          </Container>
+
+        </Background>
+      )}
     </>
   )
 }
