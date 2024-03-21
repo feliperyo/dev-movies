@@ -5,8 +5,11 @@ import { Background, Container, ContainerButtons, Info, Poster } from './styles'
 import Button from '../../components/Button'
 import Slider from '../../components/Slider'
 import { getImages } from '../../utils/getImages'
+import Modal from '../../components/Modal'
 
 function Home() {
+  const [showModal, setShowModal] = useState(false)
+
   const [movie, setMovie] = useState()
   const [topMovie, setTopMovie] = useState()
   const [popMovie, setPopMovie] = useState()
@@ -63,13 +66,14 @@ function Home() {
     <>
       {movie && (
         <Background img={getImages(movie.backdrop_path)}>
+          {showModal && <Modal movieId={movie.id} setShowModal={setShowModal} />}
           <Container>
             <Info>
               <h1>{movie.title}</h1>
               <p>{movie.overview}</p>
               <ContainerButtons>
                 <Button red={true}>Assista Agora</Button>
-                <Button red={false}>Trailer</Button>
+                <Button onClick={() => setShowModal(true)} red={false}>Trailer</Button>
               </ContainerButtons>
             </Info>
 
