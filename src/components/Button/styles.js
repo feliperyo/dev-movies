@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 const buttonStyles = css`
   border: 2px solid #ffffff;
@@ -18,11 +18,11 @@ const buttonStyles = css`
   &:active {
     opacity: 0.8;
   }
-`;
+`
 
 export const ButtonWhite = styled.button`
   ${buttonStyles}
-`;
+`
 export const ButtonRed = styled.button`
   ${buttonStyles}
   background-color: #ff0000;
@@ -34,4 +34,4 @@ export const ButtonRed = styled.button`
     background-color: #ff0000;
     color: #ffffff;
   }
-`;
+`

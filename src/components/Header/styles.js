@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   min-height: 100px;
@@ -10,18 +10,18 @@ export const Container = styled.div`
   align-items: center;
   padding: 15px 50px;
   background-color: ${(props) =>
-    props.changeBg ? "rgba(0, 0, 0, 0.8)" : "transparent"};
+    props.changeBg ? 'rgba(0, 0, 0, 0.8)' : 'transparent'};
   transition: background-color 0.5s ease-in-out;
 
   img {
     width: 25%;
   }
-`;
+`
 export const Menu = styled.ul`
   display: flex;
   gap: 50px;
   list-style: none;
-`;
+`
 export const Li = styled.li`
   font-size: 24px;
   font-weight: 600;
@@ -34,8 +34,8 @@ export const Li = styled.li`
   }
 
   &::after {
-    content: "";
-    width: ${(props) => (props.isActive ? "100%" : 0)};
+    content: '';
+    width: ${(props) => (props.isActive ? '100%' : 0)};
     height: 2px;
     background-color: #189b20;
     position: absolute;
@@ -49,4 +49,4 @@ export const Li = styled.li`
     width: 100%;
     transition: 0.5s;
   }
-`;
+`

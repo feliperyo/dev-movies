@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components'
 
 const scale = keyframes`
 from{
@@ -6,7 +6,11 @@ from{
 } to{
     transform: scale(1);
 }
-`;
+`
+
+export const Body = styled.body`
+  overflow-x: hidden;
+`
 
 export const Background = styled.div`
   background-image: url(${(props) => props.img});
@@ -19,7 +23,7 @@ export const Background = styled.div`
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -29,14 +33,14 @@ export const Background = styled.div`
   }
 
   &::after {
-    content: "";
+    content: '';
     width: 100%;
     position: absolute;
     bottom: 0;
     height: 120px;
     background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
   }
-`;
+`
 
 export const Container = styled.div`
   display: flex;
@@ -45,7 +49,7 @@ export const Container = styled.div`
   justify-content: space-around;
   height: 100%;
   max-width: 1500px;
-`;
+`
 
 export const Info = styled.div`
   z-index: 2;
@@ -65,7 +69,7 @@ export const Info = styled.div`
     margin-top: 30px;
     margin-bottom: 20px;
   }
-`;
+`
 export const Poster = styled.div`
   z-index: 2;
 
@@ -75,10 +79,10 @@ export const Poster = styled.div`
     animation: ${scale} 0.5s linear;
     box-shadow: rgb(0 0 0 / 75%) 0px 7px 29px 0px;
   }
-`;
+`
 
 export const ContainerButtons = styled.div`
   display: flex;
   gap: 20px;
   margin-top: 30px;
-`;
+`

@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components'
 
 const scale = keyframes`
 from{
@@ -7,7 +7,7 @@ from{
 to{
   transform: scale(1);
 }
-`;
+`
 
 export const Background = styled.div`
   background-image: url(${(props) => props.image});
@@ -18,7 +18,7 @@ export const Background = styled.div`
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ export const Background = styled.div`
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 0;
@@ -36,7 +36,7 @@ export const Background = styled.div`
     height: 120px;
     background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
   }
-`;
+`
 
 export const Cover = styled.div`
   padding: 20px;
@@ -51,7 +51,7 @@ export const Cover = styled.div`
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     animation: ${scale} 0.5s linear;
   }
-`;
+`
 
 export const Container = styled.div`
   display: flex;
@@ -60,7 +60,7 @@ export const Container = styled.div`
   height: 100%;
   max-width: 1500px;
   margin-top: -100px;
-`;
+`
 
 export const Info = styled.div`
   z-index: 99;
@@ -80,7 +80,7 @@ export const Info = styled.div`
   p {
     font-weight: 700;
   }
-`;
+`
 
 export const ContainerMovies = styled.div`
   display: flex;
@@ -109,4 +109,4 @@ export const ContainerMovies = styled.div`
   iframe {
     border: none;
   }
-`;
+`
