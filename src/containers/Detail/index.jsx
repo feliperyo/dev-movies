@@ -11,7 +11,14 @@ import {
   getTrailer
 } from '../../services/getData'
 import { getImages } from '../../utils/getImages'
-import { Container, Background, Cover, Info, ContainerMovies } from './styles'
+import {
+  Body,
+  Container,
+  Background,
+  Cover,
+  Info,
+  ContainerMovies
+} from './styles'
 
 function Detail() {
   const { id } = useParams()
@@ -39,7 +46,7 @@ function Detail() {
     getAllData()
   }, [])
   return (
-    <>
+    <Body>
       {movieDetail && (
         <>
           <Background image={getImages(movieDetail.backdrop_path)} />
@@ -74,7 +81,7 @@ function Detail() {
           {movieSimilar && <Slider info={movieSimilar} title={'Similares'} />}
         </>
       )}
-    </>
+    </Body>
   )
 }
 
