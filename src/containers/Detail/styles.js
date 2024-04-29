@@ -9,6 +9,10 @@ to{
 }
 `
 
+export const Body = styled.div`
+  overflow-x: hidden;
+`
+
 export const Background = styled.div`
   background-image: url(${(props) => props.image});
   height: 50vh;

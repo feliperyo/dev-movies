@@ -44,7 +44,7 @@ function Detail() {
         .catch((error) => console.error(error))
     }
     getAllData()
-  }, [])
+  }, [id])
   return (
     <Body>
       {movieDetail && (
