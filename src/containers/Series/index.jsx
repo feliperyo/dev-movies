@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+import Preloader from '../../components/Preloader'
 import Slider from '../../components/Slider'
 import {
   getTodaySeries,
@@ -36,6 +37,7 @@ function Series() {
 
   return (
     <Body>
+      <Preloader></Preloader>
       {todaySeries && <Slider info={todaySeries} title={'Estreias'} />}
       {airSeries && <Slider info={airSeries} title={'No Ar'} />}
       {popSeries && <Slider info={popSeries} title={'Séries Populares'} />}

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 
+import Preloader from '../../components/Preloader'
 import Slider from '../../components/Slider'
 import {
   getPlayingMovies,
@@ -36,6 +37,7 @@ function Movies() {
 
   return (
     <Body>
+      <Preloader></Preloader>
       {playingMovie && (
         <Slider info={playingMovie} title={'Sendo Reproduzidos'} />
       )}
