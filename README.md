@@ -7,7 +7,7 @@
 <br>
 
 <div align="center">
-  <img width="600" src="https://github.com/feliperyo/dev-movies/blob/master/src/assets/mockup.png?raw=true"/>
+  <img width="800" src="https://github.com/feliperyo/dev-movies/blob/master/src/assets/mockup.png?raw=true"/>
 </div>
 <br>
 
