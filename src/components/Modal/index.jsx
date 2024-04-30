@@ -12,7 +12,8 @@ function Modal({ movieId, setShowModal }) {
     }
 
     getTrailer()
-  }, [movieId])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <Background onClick={() => setShowModal(false)}>

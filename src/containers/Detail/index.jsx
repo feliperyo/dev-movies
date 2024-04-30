@@ -45,7 +45,8 @@ function Detail() {
         .catch((error) => console.error(error))
     }
     getAllData()
-  }, [id])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   return (
     <Body>
       {movieDetail && (
