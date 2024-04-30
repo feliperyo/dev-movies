@@ -1,5 +1,21 @@
 import api from './api'
 
+export async function getPlayingMovies() {
+  const {
+    data: { results }
+  } = await api.get('/movie/now_playing')
+
+  return results
+}
+
+export async function getCommingMovies() {
+  const {
+    data: { results }
+  } = await api.get('/movie/upcoming')
+
+  return results
+}
+
 export async function getMovies() {
   const {
     data: { results }
@@ -20,6 +36,22 @@ export async function getPopMovies() {
   const {
     data: { results }
   } = await api.get('/movie/popular')
+
+  return results
+}
+
+export async function getTodaySeries() {
+  const {
+    data: { results }
+  } = await api.get('tv/airing_today')
+
+  return results
+}
+
+export async function getAirSeries() {
+  const {
+    data: { results }
+  } = await api.get('tv/on_the_air')
 
   return results
 }

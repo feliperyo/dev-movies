@@ -12,7 +12,7 @@ function Modal({ movieId, setShowModal }) {
     }
 
     getTrailer()
-  }, [])
+  }, [movieId])
 
   return (
     <Background onClick={() => setShowModal(false)}>
