@@ -54,6 +54,10 @@ export const Container = styled.div`
     width: 650px;
     flex-direction: column;
   }
+
+  @media screen and (max-width: 500px) {
+    width: 400px;
+  }
 `
 
 export const Info = styled.div`
@@ -79,6 +83,16 @@ export const Info = styled.div`
     text-align: center;
     width: 100%;
   }
+
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 `
 export const Poster = styled.div`
   z-index: 2;
@@ -95,6 +109,12 @@ export const Poster = styled.div`
       width: 350px;
     }
   }
+
+  @media screen and (max-width: 500px) {
+    img {
+      width: 275px;
+    }
+  }
 `
 
 export const ContainerButtons = styled.div`
@@ -106,5 +126,9 @@ export const ContainerButtons = styled.div`
     width: 100%;
     justify-content: space-around;
     margin-bottom: -200px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-bottom: -125px;
   }
 `

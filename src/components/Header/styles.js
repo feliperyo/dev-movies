@@ -49,4 +49,8 @@ export const Li = styled.li`
     width: 100%;
     transition: 0.5s;
   }
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `
