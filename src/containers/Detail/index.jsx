@@ -13,6 +13,7 @@ import {
 import { getImages } from '../../utils/getImages'
 import {
   Body,
+  Div,
   Container,
   Background,
   Cover,
@@ -50,19 +51,21 @@ function Detail() {
       {movieDetail && (
         <>
           <Background image={getImages(movieDetail.backdrop_path)} />
-          <Container>
-            <Cover>
-              <img src={getImages(movieDetail.poster_path)} />
-            </Cover>
-            <Info>
-              <h2>{movieDetail.title}</h2>
-              <SpanGenres genres={movieDetail.genres} />
-              <p>{movieDetail.overview}</p>
-              <div>
-                <Credits credits={movieCredit} />
-              </div>
-            </Info>
-          </Container>
+          <Div>
+            <Container>
+              <Cover>
+                <img src={getImages(movieDetail.poster_path)} />
+              </Cover>
+              <Info>
+                <h2>{movieDetail.title}</h2>
+                <SpanGenres genres={movieDetail.genres} />
+                <p>{movieDetail.overview}</p>
+                <div>
+                  <Credits credits={movieCredit} />
+                </div>
+              </Info>
+            </Container>
+          </Div>
 
           <ContainerMovies>
             {movieTrailer &&

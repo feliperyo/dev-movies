@@ -17,4 +17,15 @@ export const Container = styled.div`
     margin-top: 15px;
     text-align: center;
   }
+
+  @media screen and (max-width: 500px) {
+    img {
+      width: 175px;
+      border-radius: 20px;
+    }
+
+    h3 {
+      font-size: 15px;
+    }
+  }
 `

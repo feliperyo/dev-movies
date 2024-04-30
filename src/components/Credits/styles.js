@@ -20,4 +20,11 @@ export const Container = styled.div`
     flex-direction: column;
     gap: 5px;
   }
+
+  @media screen and (max-width: 500px) {
+    img {
+      width: 65px;
+      border-radius: 10px;
+    }
+  }
 `

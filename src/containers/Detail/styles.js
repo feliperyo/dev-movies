@@ -34,7 +34,7 @@ export const Background = styled.div`
   &::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     height: 120px;
@@ -55,6 +55,19 @@ export const Cover = styled.div`
     box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
     animation: ${scale} 0.5s linear;
   }
+
+  @media screen and (max-width: 500px) {
+    img {
+      width: 250px;
+    }
+  }
+`
+
+export const Div = styled.div`
+  @media screen and (max-width: 1030px) {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 export const Container = styled.div`
@@ -63,7 +76,16 @@ export const Container = styled.div`
   align-items: flex-start;
   height: 100%;
   max-width: 1500px;
-  margin-top: -100px;
+  margin-top: -250px;
+
+  @media screen and (max-width: 1030px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 750px;
+    margin-top: -400px;
+    text-align: center;
+  }
 `
 
 export const Info = styled.div`
@@ -83,6 +105,21 @@ export const Info = styled.div`
 
   p {
     font-weight: 700;
+  }
+
+  @media screen and (max-width: 1030px) {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 750px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 350px;
+
+    p {
+      font-size: 10px;
+    }
   }
 `
 

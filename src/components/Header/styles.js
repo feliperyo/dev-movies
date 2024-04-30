@@ -16,6 +16,10 @@ export const Container = styled.div`
   img {
     width: 25%;
   }
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `
 export const Menu = styled.ul`
   display: flex;
