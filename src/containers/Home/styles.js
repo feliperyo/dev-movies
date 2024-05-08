@@ -51,12 +51,18 @@ export const Container = styled.div`
   max-width: 1500px;
 
   @media screen and (max-width: 1030px) {
-    width: 650px;
-    flex-direction: column;
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 30px 0 100px;
   }
 
   @media screen and (max-width: 500px) {
-    width: 400px;
+    height: 150%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-top: 200px;
+    margin-bottom: 200px;
   }
 `
 
