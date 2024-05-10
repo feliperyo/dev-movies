@@ -41,7 +41,7 @@ export const Li = styled.li`
     content: '';
     width: ${(props) => (props.isActive ? '100%' : 0)};
     height: 2px;
-    background-color: #189b20;
+    background-color: #e32833;
     position: absolute;
     bottom: -3px;
     left: 50%;

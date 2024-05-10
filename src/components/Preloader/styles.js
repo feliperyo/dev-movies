@@ -35,6 +35,6 @@ export const Loader = styled.div`
   width: 50px;
   height: 50px;
   border: 6px solid #fff;
-  border-top-color: #189b20;
+  border-top-color: #e32833;
   border-radius: 50%;
 `
