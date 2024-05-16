@@ -39,4 +39,13 @@ export const Container = styled.div`
   iframe {
     border: none;
   }
+
+  @media screen and (max-width: 1030px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 95%;
+    height: 50%;
+  }
 `
